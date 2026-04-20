@@ -131,13 +131,33 @@ export function ProjectsSection() {
 
 // ---- Certifications ------------------------------------------------------
 
-function CertItem({ name, issuer }) {
+function CertItem({ item }) {
   return (
     <div className="cert-item reveal">
-      <div className="cert-dot" />
-      <div>
-        <p className="cert-name">{name}</p>
-        <p className="cert-issuer">{issuer}</p>
+      <div className="cert-left">
+        <div className={`cert-dot ${item.type === "Degree" ? "degree" : "cert"}`} />
+      </div>
+
+      <div className="cert-content">
+        {/* Title */}
+        <p className="cert-title">{item.title}</p>
+
+        {/* Institute / Issuer */}
+        <p className="cert-sub">{item.issuer}</p>
+
+        {/* Meta Info */}
+        <div className="cert-meta">
+          {item.timeline && <span>{item.timeline}</span>}
+          {item.date && <span>{item.date}</span>}
+          {item.score && <span>{item.score}</span>}
+        </div>
+
+        {/* Link */}
+        {item.link && (
+          <a href={item.link} target="_blank" rel="noopener noreferrer">
+            View →
+          </a>
+        )}
       </div>
     </div>
   );
@@ -148,7 +168,7 @@ export function CertificationsSection() {
     <section id="certifications" className="section">
       <p className="section-label">Education & Certifications</p>
       {CERTIFICATIONS.map((cert, index) => (
-        <CertItem key={index} {...cert} />
+        <CertItem key={index} item={cert} />
       ))}
     </section>
   );

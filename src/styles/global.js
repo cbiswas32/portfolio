@@ -342,31 +342,67 @@ export const GLOBAL_CSS = `
   }
 
   /* ---- Certifications ---- */
-  .cert-item {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 16px;
-    border-radius: 10px;
-    border: 1px solid transparent;
-    transition: background .2s, border-color .2s;
-    margin-bottom: 4px;
-  }
+ .cert-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
 
-  .cert-item:hover { background: var(--surface); border-color: var(--border); }
+.cert-left {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 4px;
+}
 
-  .cert-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 8px var(--accent);
-    flex-shrink: 0;
-  }
+.cert-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
 
-  .cert-name { font-size: 0.875rem; font-weight: 400; color: var(--text); }
-  .cert-issuer { font-size: 0.68rem; font-weight: 500; color: var(--muted); letter-spacing: 0.04em; }
+.cert-dot.degree {
+  background: #00c8ff;
+}
 
+.cert-dot.cert {
+  background: #00ff95;
+}
+
+.cert-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cert-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.cert-sub {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.cert-meta {
+  font-size: 0.75rem;
+  color: var(--muted);
+  display: flex;
+  gap: 10px;
+}
+
+.cert-item a {
+  font-size: 0.75rem;
+  color: var(--accent);
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.cert-item a:hover {
+  text-decoration: underline;
+}
   /* ---- Footer ---- */
   .footer {
     font-size: 0.75rem;

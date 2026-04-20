@@ -168,7 +168,7 @@ export const SOCIAL_LINKS = [
   },
   {
     label: "Resume",
-    href: "https://www.linkedin.com/in/chinmoybiswas-81ab81212",
+    href: "https://drive.google.com/file/d/19gjtTFO04Bs4D037aA_cuf-TwnrUYadZ/view?usp=drive_link",
     type: "resume",
   },
 ];

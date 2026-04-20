@@ -345,33 +345,43 @@ export const GLOBAL_CSS = `
  .cert-item {
   display: flex;
   gap: 12px;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: border-color .25s, transform .25s, box-shadow .25s;
+  margin-bottom: 16px;
+  cursor: default;
+}
+.cert-item:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0,229,160,0.08);
 }
 
 .cert-left {
   display: flex;
   align-items: flex-start;
-  padding-top: 4px;
+  padding-top: 6px;
 }
 
-.cert-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
+.cert-icon {
+  width: 18px;
+  height: 18px;
 }
 
-.cert-dot.degree {
-  background: #00c8ff;
+.cert-icon.degree {
+  color: #00c8ff;
 }
 
-.cert-dot.cert {
-  background: #00ff95;
+.cert-icon.cert {
+  color: #00ff95;
 }
 
 .cert-content {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 2px;
 }
 
@@ -379,11 +389,13 @@ export const GLOBAL_CSS = `
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--white);
+  text-align: left;
 }
 
 .cert-sub {
   font-size: 0.8rem;
   color: var(--muted);
+  text-align: left;
 }
 
 .cert-meta {
@@ -391,6 +403,7 @@ export const GLOBAL_CSS = `
   color: var(--muted);
   display: flex;
   gap: 10px;
+  text-align: left;
 }
 
 .cert-item a {
@@ -398,10 +411,12 @@ export const GLOBAL_CSS = `
   color: var(--accent);
   text-decoration: none;
   margin-top: 4px;
+  text-align: left;
 }
 
 .cert-item a:hover {
   text-decoration: underline;
+  text-align: left;
 }
   /* ---- Footer ---- */
   .footer {

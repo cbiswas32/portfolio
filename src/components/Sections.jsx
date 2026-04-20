@@ -22,36 +22,39 @@ export function AboutSection() {
     <section id="about" className="section">
       <p className="section-label">About</p>
 
- <div className="about-text reveal">
-  <p>
-    I’m a Software Engineer at <strong>Bandhan-Konnagar</strong> with 4+ years
-    of experience building scalable, frontend-focused full-stack applications
-    using <strong>React.js, TypeScript, and Node.js</strong>. I focus on creating
-    high-performance, user-centric systems with clean and maintainable architecture.
-  </p>
+      <div className="about-text reveal">
+        <p>
+          I’m a Software Engineer at <strong>Bandhan-Konnagar</strong> with 4+
+          years of experience building scalable, frontend-focused full-stack
+          applications using <strong>React.js, TypeScript, and Node.js</strong>.
+          I focus on creating high-performance, user-centric systems with clean
+          and maintainable architecture.
+        </p>
 
-  <p>
-    I work extensively on <strong>ETL pipelines</strong> and modern data engineering
-    systems, building scalable workflows using <strong>Apache Spark, Airflow,
-    Iceberg, and StarRocks</strong>. Currently, I’m developing an{" "}
-    <strong>AI-powered ETL platform</strong> with visual orchestration to simplify
-    complex data workflows and improve reliability.
-  </p>
+        <p>
+          I work extensively on <strong>ETL pipelines</strong> and modern data
+          engineering systems, building scalable workflows using{" "}
+          <strong>Apache Spark, Airflow, Iceberg, and StarRocks</strong>.
+          Currently, I’m developing an <strong>AI-powered ETL platform</strong>{" "}
+          with visual orchestration to simplify complex data workflows and
+          improve reliability.
+        </p>
 
-  <p>
-    I’ve built <strong>AI chatbots using NLP</strong> (IBM Watson) and contributed
-    to large-scale platforms like <strong>THP in collaboration with NABARD</strong>,
-    where I developed responsive UIs, scalable APIs, and systems handling high
-    volumes of real-world data. I also focus on code quality, system monitoring,
-    and production-ready deployments using tools like Docker and Kubernetes.
-  </p>
+        <p>
+          I’ve built <strong>AI chatbots using NLP</strong> (IBM Watson) and
+          contributed to large-scale platforms like{" "}
+          <strong>THP in collaboration with NABARD</strong>, where I developed
+          responsive UIs, scalable APIs, and systems handling high volumes of
+          real-world data. I also focus on code quality, system monitoring, and
+          production-ready deployments using tools like Docker and Kubernetes.
+        </p>
 
-  <p>
-    Outside of work, I enjoy <strong>photography</strong> and{" "}
-    <strong>bike riding</strong>, and I regularly explore system design and
-    emerging AI technologies.
-  </p>
-</div>
+        <p>
+          Outside of work, I enjoy <strong>photography</strong> and{" "}
+          <strong>bike riding</strong>, and I regularly explore system design
+          and emerging AI technologies.
+        </p>
+      </div>
 
       <div className="skills-grid reveal">
         {SKILLS.map((skill) => (
@@ -128,31 +131,75 @@ export function ProjectsSection() {
     </section>
   );
 }
+function DegreeIcon() {
+  return (
+    <svg
+      className="cert-icon degree"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      <path d="M12 3L1 9L12 15L21 11V17H23V9L12 3Z" fill="currentColor" />
+      <path
+        d="M5 12V16C5 18 9 20 12 20C15 20 19 18 19 16V12L12 16L5 12Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+function CertificateIcon() {
+  return (
+    <svg
+      className="cert-icon cert"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      {/* Document */}
+      <rect
+        x="4"
+        y="3"
+        width="14"
+        height="18"
+        rx="2"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      />
 
-// ---- Certifications ------------------------------------------------------
+      {/* Lines (text inside certificate) */}
+      <path
+        d="M7 8H15M7 11H15M7 14H12"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+
+      {/* Ribbon */}
+      <path d="M18 14L20 16L22 14V21L20 19L18 21V14Z" fill="currentColor" />
+    </svg>
+  );
+}
 
 function CertItem({ item }) {
   return (
     <div className="cert-item reveal">
       <div className="cert-left">
-        <div className={`cert-dot ${item.type === "Degree" ? "degree" : "cert"}`} />
+        {item.type === "Degree" ? <DegreeIcon /> : <CertificateIcon />}
       </div>
 
       <div className="cert-content">
-        {/* Title */}
         <p className="cert-title">{item.title}</p>
 
-        {/* Institute / Issuer */}
         <p className="cert-sub">{item.issuer}</p>
 
-        {/* Meta Info */}
         <div className="cert-meta">
           {item.timeline && <span>{item.timeline}</span>}
           {item.date && <span>{item.date}</span>}
           {item.score && <span>{item.score}</span>}
         </div>
 
-        {/* Link */}
         {item.link && (
           <a href={item.link} target="_blank" rel="noopener noreferrer">
             View →
@@ -162,6 +209,42 @@ function CertItem({ item }) {
     </div>
   );
 }
+
+// ---- Certifications ------------------------------------------------------
+
+// function CertItem({ item }) {
+//   return (
+//     <div className="cert-item reveal">
+//       <div className="cert-left">
+//         <div
+//           className={`cert-dot ${item.type === "Degree" ? "degree" : "cert"}`}
+//         />
+//       </div>
+
+//       <div className="cert-content">
+//         {/* Title */}
+//         <p className="cert-title">{item.title}</p>
+
+//         {/* Institute / Issuer */}
+//         <p className="cert-sub">{item.issuer}</p>
+
+//         {/* Meta Info */}
+//         <div className="cert-meta">
+//           {item.timeline && <span>{item.timeline}</span>}
+//           {item.date && <span>{item.date}</span>}
+//           {item.score && <span>{item.score}</span>}
+//         </div>
+
+//         {/* Link */}
+//         {item.link && (
+//           <a href={item.link} target="_blank" rel="noopener noreferrer">
+//             View →
+//           </a>
+//         )}
+//       </div>
+//     </div>
+//   );
+// }
 
 export function CertificationsSection() {
   return (

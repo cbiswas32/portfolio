@@ -262,20 +262,26 @@ export function CertificationsSection() {
 export function Footer() {
   return (
     <footer className="footer reveal">
-      <p>
+      <p>Thank you for visiting.</p>
+
+      <p style={{ marginTop: 4 }}>
         Designed &amp; built by{" "}
         <strong style={{ color: "var(--accent)" }}>Chinmoy Biswas</strong>.
       </p>
+
       <p style={{ marginTop: 4 }}>
-        Inspired by{" "}
-        <a href="https://brittanychiang.com" target="_blank" rel="noreferrer">
-          Brittany Chiang
-        </a>
-        &nbsp;&middot;&nbsp;
         <a href="mailto:yourchinmoy@gmail.com">yourchinmoy@gmail.com</a>
         &nbsp;&middot;&nbsp;
-        <a href="https://chinmoy.net.in" target="_blank" rel="noreferrer">
+        <a href="https://chinmoy.online" target="_blank" rel="noreferrer">
           chinmoy.online
+        </a>
+        &nbsp;&middot;&nbsp;
+        <a
+          href="https://cbiswas32.github.io/chinmoy.github.io/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Portfolio Archive
         </a>
       </p>
     </footer>

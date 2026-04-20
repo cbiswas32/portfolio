@@ -371,7 +371,7 @@ export const GLOBAL_CSS = `
 }
 
 .cert-icon.degree {
-  color: #00c8ff;
+  color: #00ff95;
 }
 
 .cert-icon.cert {
@@ -429,6 +429,7 @@ export const GLOBAL_CSS = `
   }
 
   .footer a { color: var(--accent); }
+  .footer a:hover { text-decoration: underline }
 
   /* ---- Cursor glow ---- */
   .cursor-glow {

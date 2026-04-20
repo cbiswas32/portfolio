@@ -59,10 +59,62 @@ export const IconFolder = () => (
   </svg>
 );
 
+export const IconDownload = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    style={{ width: 18, height: 18 }}
+  >
+    <path d="M12 3v12" />
+    <polyline points="7 11 12 16 17 11" />
+    <path d="M5 21h14" />
+  </svg>
+);
+export const IconPhone = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    style={{ width: 18, height: 18 }}
+  >
+    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.08 4.18 2 2 0 014.06 2h3a2 2 0 012 1.72c.12.89.32 1.76.59 2.6a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.48-1.11a2 2 0 012.11-.45c.84.27 1.71.47 2.6.59A2 2 0 0122 16.92z" />
+  </svg>
+);
+
+export const IconInstagram = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    style={{ width: 18, height: 18 }}
+  >
+    {/* Outer box */}
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+
+    {/* Circle (lens) */}
+    <circle cx="12" cy="12" r="4" />
+
+    {/* Small dot */}
+    <circle cx="17" cy="7" r="1.5" fill="currentColor" stroke="none" />
+  </svg>
+);
 // Maps a social link type string (from data/index.js) to its icon component.
 // Centralising this here means the Sidebar doesn't need to know about icon internals.
 export const SOCIAL_ICON_MAP = {
   github: IconGithub,
   linkedin: IconLinkedin,
   mail: IconMail,
+  phone: IconPhone,
+  resume: IconDownload,
+  instagram: IconInstagram,
 };

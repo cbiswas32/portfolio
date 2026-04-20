@@ -1,6 +1,6 @@
 # Chinmoy Biswas – Developer Portfolio  
 
-**Live Demo:** *chinmoy.online*  
+**Live Demo:** https://chinmoy.online 
 **Repository:** https://github.com/cbiswas32/portfolio  
 
 ---

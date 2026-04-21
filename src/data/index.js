@@ -168,7 +168,7 @@ export const SOCIAL_LINKS = [
   },
   {
     label: "Resume",
-    href: "https://drive.google.com/file/d/19gjtTFO04Bs4D037aA_cuf-TwnrUYadZ/view?usp=drive_link",
+    href: "https://drive.google.com/file/d/1j3ufWua4dhuHHbv2gSq1z6X0FtzyZ7b0/view?usp=sharing",
     type: "resume",
   },
 ];

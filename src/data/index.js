@@ -148,7 +148,7 @@ export const CERTIFICATIONS = [
 export const SOCIAL_LINKS = [
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/chinmoybiswas-81ab81212",
+    href: "https://www.linkedin.com/in/chinmoy-biswas-81ab81212/",
     type: "linkedin",
   },
   {
@@ -168,7 +168,7 @@ export const SOCIAL_LINKS = [
   },
   {
     label: "Resume",
-    href: "https://drive.google.com/file/d/1j3ufWua4dhuHHbv2gSq1z6X0FtzyZ7b0/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1DzHg_1EcRoHMtsPe8UrkxJRsHBzzp7O-/view?usp=sharing",
     type: "resume",
   },
 ];

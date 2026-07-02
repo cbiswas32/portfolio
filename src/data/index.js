@@ -31,6 +31,8 @@ export const SKILLS = [
   "ETL Pipelines",
   "SonarQube",
   "IBM Watson",
+  "Redux",
+  "React Native"
 ];
 
 export const EXPERIENCE = [
